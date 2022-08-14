@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header,
+.container {
+  width: 95vw;
+  margin: auto;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+  height: 5vh;
+}
+.logo h3 {
+  font-family: sans-serif;
+  font-weight: 500;
+  color: #5f6d8d;
+  border-top: 2px solid rgb(238, 100, 123);
+  border-bottom: 2px solid #948d8d;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  display: inline-block;
+  padding: 0 10px;
+}
+ul li:hover {
+  transform: scale(0.9);
+}
+ul li a {
+  text-decoration: none;
+  color: #272727;
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: 600;
+}
+.humburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #948d8d;
+  margin-top: 3px;
+  display: none;
+}
+input {
+  display: none;
+}
+.container {
+  display: flex;
+  align-items: center;
+  height: 90vh;
+}
+.intro-text h1 {
+  font-size: 40px;
+  background: linear-gradient(to right, #777676, #e87386);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: monospace;
+}
+.intro-text p {
+  font-size: 20px;
+  margin-top: 15px;
+  color: #272727;
+  font-family: sans-serif;
+}
+.btn {
+  margin-top: 30px;
+}
+.btn button {
+  outline: none;
+  font-size: 16px;
+}
+.btn-purchase {
+  background: transparent;
+  border: 1px solid #e87386;
+  padding: 5px 15px;
+  margin-right: 15px;
+  cursor: pointer;
+  color: #777676;
+}
+.btn-sizes {
+  border: none;
+  padding: 6px 30px;
+  background: #777676;
+  color: #ffffff;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.btn button:hover {
+  transform: scale(0.9);
+}
+.cover img {
+  height: 80vh;
+  animation: animate-image 1.5s ease;
+}
+@keyframes animate-image {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@media screen and (max-width: 995px) {
+  .logo h3 {
+    font-size: 16px;
+  }
+  .cover img {
+    height: 70vh;
+  }
+  .intro-text h1 {
+    font-size: 30px;
+  }
+
+  .btn-purchase {
+    padding: 5px 10px;
+  }
+  .btn-sizes {
+    padding: 6px 20px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .container {
+    flex-direction: column;
+  }
+  .intro-text {
+    text-align: center;
+  }
+  .intro-text p {
+    margin-top: 10px;
+  }
+  .intro-text h1 {
+    font-size: 25px;
+  }
+  .logo h3 {
+    font-size: 16px;
+  }
+  .btn {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .cover {
+    margin: auto;
+  }
+  .cover img {
+    height: 50vh;
+  }
+  .humburger span {
+    display: block;
+    cursor: pointer;
+  }
+  .humburger:hover {
+    transform: scale(0.9);
+  }
+  ul {
+    position: fixed;
+    width: 40%;
+    height: 30vh;
+    top: 0;
+    left: -100%;
+    background-color: #272727;
+    transition: all 0.5s;
+  }
+  ul li {
+    display: block;
+    text-align: center;
+    line-height: 28px;
+    margin: 20px;
+  }
+  ul li a {
+    color: #fff;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
